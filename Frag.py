@@ -1,4 +1,4 @@
-import telebot, requests, re, json
+import telegram-bot, requests, re, json
 
 PRIVADO = [1325871267]
 #
