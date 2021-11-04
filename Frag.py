@@ -1,4 +1,3 @@
-<module>
 import telebot, requests, re, json
 
 PRIVADO = [1325871267]
