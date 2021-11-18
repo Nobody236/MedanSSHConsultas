@@ -1,6 +1,6 @@
 import telebot, requests, re, json
 
-PRIVADO = [1325871267]
+PRIVADO = [ID]
 #
 #
 GRUPO = [ID]
@@ -11,7 +11,7 @@ EXCEPT = []
 #
 ANONY = [] # OFF
 
-bot = telebot.TeleBot("1642526198:AAElRlkRjOIatvsVqHP8uhK9lBxq9SYS1AQ)")
+bot = telebot.TeleBot("TOKEN TELEGRAM")
 
 @bot.message_handler(commands=['cnpj'])
 def zn(nome):
@@ -26,7 +26,7 @@ def zn(nome):
                     ip = re.sub('[^0-9]', '', msg)
                     url = requests.get('https://www.receitaws.com.br/v1/cnpj/' + ip)
                     req = url.json()
-                    response = f'🔍 <b>CONSULTA DE CNPJ</b> 🔍\n\n<b>• CNPJ</b>: <code>{req["cnpj"]}</code>\n<b>• MATRIZ</b>: <code>{req["tipo"]}</code>\n\n<b>• ABERTURA</b>: <code>{req["abertura"]}</code>\n\n<b>• NOME</b>: <code>{req["nome"]}</code>\n\n<b>• NOME DA FANTASIA</b>: <code>{req["fantasia"]}</code>\n<b>• PORTE</b>: <code>{req["porte"]}</code>\n\n<b>• ATIVIDADE PRINCIPAL</b>: <code>{req["atividade_principal"]}</code>\n\n<b>• ATIVIDADES SEGUNDARIAS</b>: <code>{req["atividades_secundarias"]}</code>\n\n<b>• CÓDIGO NATUREZA JUDICIÁRIAS</b>: <code>{req["natureza_juridica"]}</code>\n\n<b>• QUEDRO DE SÓCIOS E ADMINISTRADORES</b>: <code>{req["nome"]}</code>\n\n<b>• LOGRADOURO</b>: <code>{req["logradouro"]}</code>\n<b>• NÚMERO</b>: <code>{req["numero"]}</code>\n<b>• COMPLEMENTO</b>: <code>{req["complemento"]}</code>\n\n<b>• CEP</b>: <code>{req["cep"]}</code>\n<b>• BAIRRO</b>: <code>{req["bairro"]}</code>\n<b>• MUNICÍPIO</b>: <code>{req["municipio"]}</code>\n<b>• ESTADO</b>: <code>{req["uf"]}</code>\n\n<b>• TELEFONE</b>: <code>{req["telefone"]}</code>\n<b>• EMAIL</b>: <code>{req["email"]}</code>\n\n<b>• By</b>: @MedanSSH_robot'
+                    response = f'🔍 <b>CONSULTA DE CNPJ</b> 🔍\n\n<b>• CNPJ</b>: <code>{req["cnpj"]}</code>\n<b>• MATRIZ</b>: <code>{req["tipo"]}</code>\n\n<b>• ABERTURA</b>: <code>{req["abertura"]}</code>\n\n<b>• NOME</b>: <code>{req["nome"]}</code>\n\n<b>• NOME DA FANTASIA</b>: <code>{req["fantasia"]}</code>\n<b>• PORTE</b>: <code>{req["porte"]}</code>\n\n<b>• ATIVIDADE PRINCIPAL</b>: <code>{req["atividade_principal"]}</code>\n\n<b>• ATIVIDADES SEGUNDARIAS</b>: <code>{req["atividades_secundarias"]}</code>\n\n<b>• CÓDIGO NATUREZA JUDICIÁRIAS</b>: <code>{req["natureza_juridica"]}</code>\n\n<b>• QUEDRO DE SÓCIOS E ADMINISTRADORES</b>: <code>{req["nome"]}</code>\n\n<b>• LOGRADOURO</b>: <code>{req["logradouro"]}</code>\n<b>• NÚMERO</b>: <code>{req["numero"]}</code>\n<b>• COMPLEMENTO</b>: <code>{req["complemento"]}</code>\n\n<b>• CEP</b>: <code>{req["cep"]}</code>\n<b>• BAIRRO</b>: <code>{req["bairro"]}</code>\n<b>• MUNICÍPIO</b>: <code>{req["municipio"]}</code>\n<b>• ESTADO</b>: <code>{req["uf"]}</code>\n\n<b>• TELEFONE</b>: <code>{req["telefone"]}</code>\n<b>• EMAIL</b>: <code>{req["email"]}</code>\n\n<b>• By</b>: @suprem_robot'
                     bot.send_chat_action(nome.chat.id, 'typing')
                     bot.send_chat_action(nome.chat.id, 'typing')
                     bot.send_chat_action(nome.chat.id, 'typing')
@@ -90,7 +90,7 @@ def bniio(men):
         bot.reply_to(men, '<b>' + '⚠ ERRADO BURRO ⚠' + '</b>')
     else:
         try:
-        	menu = f'olá, <pre>{men.from_user.first_name}</pre>\n<b>VEJA MEUS COMANDOS</b>\n\n<b>🔍MENU DO BOT🔍</b>\n\n<b>[+] TELEFONE</b>: <code>/telefone 19996101067</code>\n<b>[+] NOME:</b>: <code>/nome CARINA ALVES MAIESKY</code>\n<b>[+] CPF</b>: <code>/cpf 34592913892</code>\n<b>[+] CNPJ</b>: <code>/cnpj 27865757000102</code>\n<b>[+] BIN</b>: <code>/bin 545323</code>\n<b>[+] VIZINHOS</b>: <code>/vizinhos 27867260854</code>\n<b>[+] PLACA</b>: <code>/placa ATJ8617</code>\n\n<b>• By</b>: @MedanSSH_robot'
+        	menu = f'olá, <pre>{men.from_user.first_name}</pre>\n<b>VEJA MEUS COMANDOS</b>\n\n<b>🔍MENU DO BOT🔍</b>\n\n<b>[+] TELEFONE</b>: <code>/telefone 19996101067</code>\n<b>[+] NOME:</b>: <code>/nome CARINA ALVES MAIESKY</code>\n<b>[+] CPF</b>: <code>/cpf 34592913892</code>\n<b>[+] CNPJ</b>: <code>/cnpj 27865757000102</code>\n<b>[+] BIN</b>: <code>/bin 545323</code>\n<b>[+] VIZINHOS</b>: <code>/vizinhos 27867260854</code>\n<b>[+] PLACA</b>: <code>/placa ATJ8617</code>\n\n<b>• By</b>: @Suprem_robot'
         	bot.reply_to(men, menu, parse_mode='HTML')
         except:
                     bot.reply_to(men, 'ERRADO BURRO',)
@@ -127,14 +127,14 @@ def byti(men):
                                    str(envia.split("<div class='itemMoradores'>")[3].split("<")[0][3:40]) + '\n' + str(envia.split("<div class='itemMoradores'>")[4].split("<")[0][3:40]) +'\n'+ \
                                    str(envia.split("<div class='itemMoradores'>")[5].split("<")[0][3:40])
 
-                            bot.reply_to(men, '<b>' '🔍CONSULTA DE VIZINHOS 🔍' '</b>' + '\n\n' + '<b>' '• VIZINHOS: ' '</b>' + '\n\n' + '<code>' + viz1 + '</code>' + '\n\n' + '<b>' '• By: @MedanSSH_robot' '</b>' , parse_mode='html')
+                            bot.reply_to(men, '<b>' '🔍CONSULTA DE VIZINHOS 🔍' '</b>' + '\n\n' + '<b>' '• VIZINHOS: ' '</b>' + '\n\n' + '<code>' + viz1 + '</code>' + '\n\n' + '<b>' '• By: @Suprem_robot' '</b>' , parse_mode='html')
                         except:
                             try:
                                 viz1 = str(envia.split("<div class='itemMoradores'>")[1].split("<")[0][3:40]) + '\n' + \
                                        str(envia.split("<div class='itemMoradores'>")[2].split("<")[0][3:40])
 
                                 bot.reply_to(men,
-                                             '<b>' '🔍CONSULTA DE VIZINHOS 🔍' '</b>' + '\n\n' + '<b>' '• VIZINHOS: ' '</b>' + '\n\n' + '<code>' + viz1 + '</code>' + '\n\n' + '<b>' '• By: @MedanSSH_robot' '</b>',
+                                             '<b>' '🔍CONSULTA DE VIZINHOS 🔍' '</b>' + '\n\n' + '<b>' '• VIZINHOS: ' '</b>' + '\n\n' + '<code>' + viz1 + '</code>' + '\n\n' + '<b>' '• By: @MSuprem_robot' '</b>',
                                              parse_mode='html')
                             except:
                                 bot.reply_to(men, '<b>⚠️VIZINHOS NÃO ENCONTRADO!⚠️</b>', parse_mode='HTML')
@@ -147,7 +147,7 @@ def byti(men):
             else:
                 bot.reply_to(men, '''𝘾𝙊𝙈𝙋𝙍𝙀 𝙅𝘼 𝙊 𝙎𝙀𝙐 𝘼𝘾𝙀𝙎𝙎𝙊 𝘼𝙊 𝙉𝙊𝙎𝙎𝙊 𝘽𝙊𝙏
 
-🔍 ⚡️「MedanSSH Robot」⚡️ 🔎
+🔍 ⚡️「SUPREM Robot」⚡️ 🔎
 ━━━━━━━━━━━━━━━━━
 𝙊 𝘽𝙊𝙏 𝙏𝙀𝙈:
 
@@ -206,7 +206,7 @@ def zn(nome):
                     ip = re.sub('[^0-9]', '', msg)
                     url = requests.get('https://www.dualitybuscas.org/api_nova/telefoneastra.php?consulta=' + ip)
                     req = url.json()
-                    response = f'🔍 <b>CONSULTA DE TELEFONE</b> 🔍\n\n<b>• TELEFONE</b>: <code>{req["TELEFONE"]}</code>\n\n<b>• By</b>: @MedanSSH_robot'
+                    response = f'🔍 <b>CONSULTA DE TELEFONE</b> 🔍\n\n<b>• TELEFONE</b>: <code>{req["TELEFONE"]}</code>\n\n<b>• By</b>: @Supremrobot'
                     bot.send_chat_action(nome.chat.id, 'typing')
                     bot.send_chat_action(nome.chat.id, 'typing')
                     bot.send_chat_action(nome.chat.id, 'typing')
@@ -302,14 +302,14 @@ def zbsn(nome):
                     ip = re.sub('[^0-9]', '', msg)
                     url = requests.get("https://apicarros.com/v1/consulta/" + ipp + ip + "/json", verify=False)
                     req = url.json()
-                    response = f'🔍<b>PLACA ENCONTRADA</b>🔍\n\n<b>• PLACA</b>: <code>{req["placa"]}</code>\n<b>• ANO</b>: <code>{req["ano"]}</code>\n<b>• CHASSI</b>: <code>{req["chassi"]}</code>\n<b>• COR</b>: <code>{req["cor"]}</code>\n<b>• DATA</b>: <code>{req["data"]}</code>\n<b>• ALERME</b>: <code>{req["dataAtualizacaoAlarme"]}</code>\n<b>• VEICULO</b>: <code>{req["dataAtualizacaoCaracteristicasVeiculo"]}</code>\n<b>• ROUBO/FURTO</b>: <code>{req["dataAtualizacaoRouboFurto"]}</code>\n<b>• MARCA</b>: <code>{req["marca"]}</code>\n<b>• MODELO</b>: <code>{req["modelo"]}</code>\n<b>• MUNICÍPIO</b>: <code>{req["municipio"]}</code>\n<b>• UF</b>: <code>{req["uf"]}</code>\n<b>• SITUAÇÃO</b>: <code>{req["situacao"]}</code>\n\n<b>• By</b>: @MedanSSH_robot'
+                    response = f'🔍<b>PLACA ENCONTRADA</b>🔍\n\n<b>• PLACA</b>: <code>{req["placa"]}</code>\n<b>• ANO</b>: <code>{req["ano"]}</code>\n<b>• CHASSI</b>: <code>{req["chassi"]}</code>\n<b>• COR</b>: <code>{req["cor"]}</code>\n<b>• DATA</b>: <code>{req["data"]}</code>\n<b>• ALERME</b>: <code>{req["dataAtualizacaoAlarme"]}</code>\n<b>• VEICULO</b>: <code>{req["dataAtualizacaoCaracteristicasVeiculo"]}</code>\n<b>• ROUBO/FURTO</b>: <code>{req["dataAtualizacaoRouboFurto"]}</code>\n<b>• MARCA</b>: <code>{req["marca"]}</code>\n<b>• MODELO</b>: <code>{req["modelo"]}</code>\n<b>• MUNICÍPIO</b>: <code>{req["municipio"]}</code>\n<b>• UF</b>: <code>{req["uf"]}</code>\n<b>• SITUAÇÃO</b>: <code>{req["situacao"]}</code>\n\n<b>• By</b>: @supremrobot'
                     bot.reply_to(nome, response, parse_mode="html")
                 except:
                 	bot.reply_to(nome, '<b>PLACA NÃO FOI ENCONTRADA</b>', parse_mode='html')
             else:
                 		bot.reply_to(nome, '''𝘾𝙊𝙈𝙋𝙍𝙀 𝙅𝘼 𝙊 𝙎𝙀𝙐 𝘼𝘾𝙀𝙎𝙎𝙊 𝘼𝙊 𝙉𝙊𝙎𝙎𝙊 𝘽𝙊𝙏
 
-🔍 ⚡️「MedanSSH Robot」⚡️ 🔎
+🔍 ⚡️「SUPREM Robot」⚡️ 🔎
 ━━━━━━━━━━━━━━━━━
 𝙊 𝘽𝙊𝙏 𝙏𝙀𝙈:
 
