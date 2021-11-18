@@ -3,7 +3,7 @@ import telebot, requests, re, json
 PRIVADO = [1325871267]
 #
 #
-GRUPO = [1325871267]
+GRUPO = [ID]
 #
 #
 EXCEPT = []
@@ -41,7 +41,7 @@ def zn(nome):
             else:
                 		bot.reply_to(nome, '''𝘾𝙊𝙈𝙋𝙍𝙀 𝙅𝘼 𝙊 𝙎𝙀𝙐 𝘼𝘾𝙀𝙎𝙎𝙊 𝘼𝙊 𝙉𝙊𝙎𝙎𝙊 𝘽𝙊𝙏
 
-🔍 ⚡️「MedanSSH Robot」⚡️ 🔎
+🔍 ⚡️「SUPREM Robot」⚡️ 🔎
 ━━━━━━━━━━━━━━━━━
 𝙊 𝘽𝙊𝙏 𝙏𝙀𝙈:
 
